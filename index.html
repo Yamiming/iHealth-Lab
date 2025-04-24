@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrative Health (iHEALTH) Lab</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: url("assets/bamboo.jpg") no-repeat center center/cover;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #4caf50;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background-color: #388e3c;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    .tab-content {
+      display: none;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .lab-focus-bg {
+      background: linear-gradient(rgba(0, 51, 0, 0.6), rgba(0, 51, 0, 0.6)), url("assets/amazon.jpg") no-repeat center center/cover;
+      color: white;
+    }
+
+    .projects-bg {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/marina-bay.jpg") no-repeat center center/cover;
+      color: white;
+    }
+
+    .publications-bg {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("assets/egypt.jpg") no-repeat center center/cover;
+      color: white;
+    }
+
+    .contact-bg {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("assets/thailand-lake.jpg") no-repeat center center/cover;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #c8e6c9;
+    }
+
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+
+    .contact-bg h2,
+    .contact-bg p {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the iHealth Lab!</h1>
+  </header>
+
+  <nav>
+    <button class="tab-link active" data-tab="about">About Us</button>
+    <button class="tab-link" data-tab="lab-focus">Lab Focus</button>
+    <button class="tab-link" data-tab="projects">Projects</button>
+    <button class="tab-link" data-tab="publications">Publications</button>
+    <button class="tab-link" data-tab="contact">Contact</button>
+  </nav>
+
+  <main>
+    <section id="about" class="tab-content active">
+      <!-- About Us content -->
+    </section>
+
+    <section id="lab-focus" class="tab-content lab-focus-bg">
+      <!-- Lab Focus content -->
+    </section>
+
+    <section id="projects" class="tab-content projects-bg">
+      <!-- Projects content -->
+    </section>
+
+    <section id="publications" class="tab-content publications-bg">
+      <!-- Publications content -->
+    </section>
+
+    <section id="contact" class="tab-content contact-bg">
+      <h2>Contact</h2>
+      <p>
+        Mingxiao Yang, MD (CMD), PhD<br>
+        Assistant Professor<br>
+        School of Biological Sciences<br>
+        NTU Chinese Medicine Clinic<br>
+        Nanyang Technological University, Singapore<br><br>
+        Email: <a href="mailto:mingxiao.yang@ntu.edu.sg" style="color: #bbf5e9;">mingxiao.yang@ntu.edu.sg</a><br>
+        Address: 60 Nanyang Drive, Singapore 637551
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Integrative Health (iHEALTH) Lab. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(item => item.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(content => {
+          content.classList.remove('active');
+          if (content.id === tab.getAttribute('data-tab')) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
