@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integrative Health (iHEALTH) Lab</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: url("assets/bamboo.jpg") no-repeat center center/cover;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #4caf50;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background-color: #388e3c;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    .tab-content {
+      display: none;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .lab-focus-bg {
+      background: linear-gradient(rgba(0, 51, 0, 0.6), rgba(0, 51, 0, 0.6)), url("assets/amazon.jpg") no-repeat center center/cover;
+      color: white;
+    }
+
+    .projects-bg {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/marina-bay.jpg") no-repeat center center/cover;
+      color: white;
+    }
+
+    .publications-bg {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("assets/egypt.jpg") no-repeat center center/cover;
+      color: white;
+    }
+
+    .contact-bg {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("assets/thailand-lake.jpg") no-repeat center center/cover;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #c8e6c9;
+    }
+
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+
+    .contact-bg h2,
+    .contact-bg p {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>iHealth Lab!</h1>
+  </header>
+
+  <nav>
+    <button class="tab-link active" data-tab="about">About Us</button>
+    <button class="tab-link" data-tab="lab-focus">Lab Focus</button>
+    <button class="tab-link" data-tab="projects">Projects</button>
+    <button class="tab-link" data-tab="publications">Publications</button>
+    <button class="tab-link" data-tab="contact">Contact</button>
+  </nav>
+
+  <main>
+    <section id="about" class="tab-content active">
+     <h2>about us</h2>
+      <p>
+        Welcome to iHealth Lab! <br><br>
+		
+		iHealth is a young lab dedicated to integrative healthcare research, teaching and educating. We welcome inquires from undergraduate and gradute students for training programs, peer researchers for multidisciplanry collaborations, and people who are interested in integrative health for meaningful discussions. <br><br>
+		
+		Our People<br>
+		Our lab PI is Mingxiao Yang, MD (CMD), PhD, a physician-scientist specializing in integrative healthcare. Dr. Yang is an Assistant Professor at the School of Biological Sciences and NTU Chinese Medicine Clinic in Nanyang Technological University, Singapore. His work spans from patient-centered clinical research, pedagogical teaching, mentorship, and clinical care (soon to come). Before joining NTU, he was an Instructor in Medicine at Harvard Medical School and a faculty member at the Zakim Center for Integrative Therapies and Healthy Living at Dana-Farber Cancer Institute in Boston, MA. He is adept at clinical and translational research in integrative therapies thanks to extensive training in integrative medicine and cancer symptom care from the University of Hong Kong (mentor: Prof. Lixing Lao) and Memorial Sloan Kettering Cancer Center (mentor: Dr. Jun J. Mao). His expertise includes integrative oncology, evidence-based medicine, metabolomics, host-gut microbiome interaction, and technology-assisted healthcare innovation. Our lab aims to promote evidence-based integrative healthcare for all. <br><br>
+		
+		Lab Members<br>
+		As a new lab, we are currently recruiting lab members, including PhD students (with NTU scholarship), master and undergraduate research assistant, postdoctoral research fellow, and clinical trial coordinators. Feel free to send a line to Dr. Yang at <a href="mailto:mingxiao.yang@ntu.edu.sg" style="color: #bbf5e9;">mingxiao.yang@ntu.edu.sg</a><br>
+		
+      </p>
+    </section>
+
+    <section id="lab-focus" class="tab-content lab-focus-bg">
+      <h2>lab focus</h2>
+      <p>
+	  <br>We are interested in integrative health in general, with specific focuses on:<br><br>
+	  1) developing integrative medicine approaches, such as acupuncture, herbal medicine, Tai Chi, and exercise, in improving the management of chronic health conditions, particularly addressing the side effects associated with cancer treatment, metabolic syndrome, and cardiovascular diseases;<br>
+	  
+	  2) investigating the neurobiological, psychosocial, and behavioral foundations of sensory function, cognition, and memory interconnections and the impact of integrative medicine therapies, utilizing translational omics, neuroimaging, and quantitative sensory testing; and<br>
+	  
+	  3) advocate for the accessibility and evidence-based integration of integrative therapies into practical healthcare settings through digitization, artificial intelligence, virtual delivery, and implementation science.<br><br>
+      </p>
+    </section>
+
+    <section id="projects" class="tab-content projects-bg">
+      <h2>project</h2>
+      <p>
+	  Research Support: <br>
+		Current Research Funding <br>
+		Award Source:	Harvard Osher Pilot Research Grant (Discretionary Award)<br>
+		Project title:	Tai Chi for Chemotherapy-Induced Peripheral Neuropathy Treatment Trial (PI)<br>
+		The major goals of this project are:	To assess the feasibility of Tai Chi for chemotherapy-induced peripheral neuropathy in a randomized waitlist-controlled trial <br>
+
+
+		Past Research Funding<br>
+		Award Source:	NIH Exploratory/Developmental Research Grant Award (R21)<br>
+		Project title:	Dopamine Metabolism and Nonpharmacologic Insomnia Interventions Among Cancer Survivors (Co-I)<br>
+		The major goals of this project are:	To evaluate the effect of acupuncture vs cognitive behavioral therapy on the dopamine-related metabolic signatures<br><br>
+		
+		Award Source:	MSK Interdisciplinary Population Science Research Awards 2022<br>
+		Project title:	Metabolic Profiling of Sleep Interventions Among Cancer Survivors<br>
+		The major goals of this project are:	To assess the effect of acupuncture vs. cognitive behavioral therapy on metabolic profile in cancer survivors with insomnia<br><br>
+
+		Award Source:	National Natural Science Foundation of China, China<br>
+		Project title:	Metabolomics Signatures of Acupuncture in Regulating Blood Pressure in Patients with Hypertension (PI)<br>
+		The major goals of this project are:	To Investigate the metabolic signatures of acupuncture for regulating blood pressure in patients with hypertension<br><br>
+
+		Award Source:	China Association of Science and Technology, China<br>
+		Project title:	Acupuncture Regulates RAAS-Gut Microbiota-SCFAs to Reduce Blood Pressure in Spontaneous Hypertensive Rats (PI)<br>
+		The major goals of this project are:	To identify the mechanism of acupuncture for blood pressure regulation in a rat model<br><br>
+
+		Award Source:	Health and Medical Research Funding, Hong Kong<br>
+		Project title:	Self-Administered Preventative Auricular Acupressure for Young Females with Primary Dysmenorrhea: A Randomized, Placebo-Controlled Trial (Co-I)<br>
+		The major goals of this project are:	To determine whether self-administered auricular acupressure is more effective than sham auricular acupressure in reducing menstrual pain among young females with menstrual pain<br><br>
+
+		Award Source:	Health and Medical Research Funding, Hong Kong<br>
+		Project title:	Effect of Acupuncture for Insomnia in Breast Cancer Patients Undergoing Chemotherapy: A Randomized, Sham-Controlled Trial<br>
+		The major goals of this project are:	To examine the efficacy and safety of acupuncture for chemotherapy-related insomnia among patients with breast cancer<br><br>
+      </p>
+    </section>
+
+    <section id="publications" class="tab-content publications-bg">
+       <h2>publications</h2>
+      <p>
+	  Peer-reviewed Research Articles: († co-first author; * corresponding author)<br>
+	  1)	Yang M, Shao C, Shao C, Saint K, Gupta M, Caputo R, Galantino ML, Harte S, Bao T. A Retrospective Cohort Study on the Preliminary Efficacy of Massage Therapy for Chemotherapy-Induced Peripheral Neuropathy Among Cancer Patients. Integr Cancer Ther. 2025 Jan-Dec;24:15347354251323258. doi: 10.1177/15347354251323258. PMID: 39995182; PMCID: PMC11863244.<br>
+	  
+	  2)	Yang M, Shao C, Shao C, Saint K, Wayne PM, Bao T. Tai Chi for balance and postural control in people with peripheral neuropathy: A scoping review. Complement Ther Med. 2024 Sep 24;86:103089. doi: 10.1016/j.ctim.2024.103089. Epub ahead of print. PMID: 39326640.
+	  3)	Yang M, Lopez-Nieves I, Tanasijevic A, Piluson L, Shrivastava M, Weitzman M, Zhi I, Mao JJ, Bao T. A randomized phase III clinical trial of acupuncture for chemotherapy-induced peripheral neuropathy treatment (ACT). J Clin Oncol. 2024 Jun 29; 42:16_suppl, TPS12151-TPS12151. DOI:10.1200/JCO.2024.42.16_suppl.TPS12151.<br>
+	  
+	  4)	Yang M, Mumford M, Han K, Tanasijevic A, Piluson L, Shrivastava M, Zhi I, Mao JJ, Bao T. A randomized phase III clinical trial of yoga for chemotherapy-induced peripheral neuropathy treatment (YCT). J Clin Oncol. 2024 Jun 29; 42:16_suppl, TPS12152-TPS12152. DOI:10.1200/JCO.2024.42.16_suppl.TPS12152. <br>
+	  
+	  5)	Yang M, Li QS, Baser RE, Li X, Hou J, Mao JJ. Nocebo expectations rather than placebo expectations affect topical pain relief: A randomized clinical trial. Biomed Pharmacother. 2024 May 10;175:116728. doi: 10.1016/j.biopha.2024.116728. Epub ahead of print. PMID: 38733772.<br>
+	  
+	  6)	Saint K, Nemirovsky D, Lessing A, Chen Y, Yang M, Underwood WP, Galantino ML, Jones LW, Bao T. Impact of exercise on chemotherapy-induced peripheral neuropathy in survivors with post-treatment primary breast cancer. Breast Cancer Res Treat. 2024 May 7. doi: 10.1007/s10549-024-07342-6. Epub ahead of print. PMID: 38713289.<br>
+	  
+	  7)	Zhang F, Chen X, Yang M, Shen X, Wang Y, Zhong D, Zeng F, Jin R. Metabolic impairments associated with type 2 diabetes mellitus and the potential effects of exercise therapy: An exploratory randomized trial based on untargeted metabolomics. PLoS One. 2024 Mar 22;19(3):e0300593. doi: 10.1371/journal.pone.0300593. PMID: 38517904; PMCID: PMC10959348.<br>
+	  
+	  8)	Qin Z, Zang Z, Yu J, Lv J, Li N, Zhang J, Yang M, Kwong JSW, Pang R, Wang J, Cui Z, Yu Y, Wang H, Zhu Y, Yuan Y, Li X, Wu Y, Wu J. Acupuncture versus sham acupuncture and usual care for Antiandrogen-Induced hot flashes in prostate cancer (AVAIL): study protocol for a randomized clinical trial. BMC Complement Med Ther. 2023 Oct 27;23(1):388. doi: 10.1186/s12906-023-04218-y. PMID: 37891531; PMCID: PMC10612187.<br>
+	  
+	  9)	Yang M, Baser RE, Khanin R, Autuori I, Li QS, Panageas KS, Orlow I, Mao JJ*. COMT Val158Met Affects the Analgesic Response to Acupuncture Among Cancer Survivors with Chronic Pain. J Pain. 2023 May 13:S1526-5900(23)00417-0. doi: 10.1016/j.jpain.2023.05.005. Epub ahead of print. PMID: 37187218.<br>
+	  
+	  10)	Yang M, Baser RE, Liou KT, Li SQ, Piulson L, Panageas KS, Mao JJ*. Effect of acupuncture versus usual care on sleep quality in cancer survivors with chronic pain: Secondary analysis of a randomized clinical trial. Cancer. 2023 Mar 29. doi: 10.1002/cncr.34766. Epub ahead of print. PMID: 36989257.<br>
+	  
+	  11)	Yang M, Wang H, Zhang YL, Zhang F, Li X, Kim SD, Chen Y, Chen J, Chimonas S, Korenstein D, Mao JJ*. The Herbal Medicine Suanzaoren (Ziziphi Spinosae Semen) for Sleep Quality Improvements: A Systematic Review and Meta-analysis. Integr Cancer Ther. 2023 Jan-Dec;22:15347354231162080. doi: 10.1177/15347354231162080. PMID: 37014010; PMCID: PMC10084578.<br>
+	  
+	  12)	Li X, Yang M †, Zhang YL, Hou YN, Smith CM, Korenstein D, Mao JJ*. Ginseng and Ginseng Herbal Formulas for Symptomatic Management of Fatigue: A Systematic Review and Meta-Analysis. J Integr Complement Med. 2023 Feb 1;. doi: 10.1089/jicm.2022.0532. [Epub ahead of print] PubMed PMID: 36730693.<br>
+	  
+	  13)	Huang Q, Wu C, Hou S, Yao K, Sun H, Wang Y, Chen Y, Law J, Yang M, Chan HY, Roy VAL, Zhao Y, Wang D, Song E, Yu X, Lao L, Sun Y, Li WJ*. Mapping of Spatiotemporal Auricular Electrophysiological Signals Reveals Human Biometric Clusters. Adv Healthc Mater. 2022 Oct 11:e2201404. doi: 10.1002/adhm.202201404. Epub ahead of print. PMID: 36217916.<br>
+	  
+	  14)	Kim SD, Kwag EB, Yang M, Yoo HS*. Efficacy and Safety of Ginger on the Side Effects of Chemotherapy in Breast Cancer Patients: Systematic Review and Meta-Analysis. Int J Mol Sci. 2022 Sep 24;23(19):11267. doi: 10.3390/ijms231911267. PMID: 36232567; PMCID: PMC9569531.<br>
+	  
+	  15)	Zhang P†, Chen Y†, Zhang F†, Pei H, Sun M, Qu Y, Du T, He X, Liang F, Jia W*, Yang M*. Effect of Acupuncture on Blood Pressure and Metabolic Profile among Patients with Essential Hypertension: Protocol of a Randomized Clinical Trial. Front Cardiovasc Med. 2022 Jun 21;9:888569. doi: 10.3389/fcvm.2022.888569. <br>
+	  
+	  16)	Yang M, Baser RE, Li SQ, Hou YN, Chong K, Zhang YL, Hoque I, Bao T, Mao JJ*. Tibetan Herbal Pain-Relieving Plaster for Chronic Musculoskeletal Pain Among Cancer Survivors: Study Protocol of a Randomized, Double-Blind, Placebo-Controlled Trial. Front Pharmacol. 2022 May 4;13:878371. doi: 10.3389/fphar.2022.878371. PMID: 35600872; PMCID: PMC9114465.<br>
+	  
+	  17)	Chen H, Yeung W, Yang M, Mu J, Ziea T, FL N, Lao L*. Guideline Acupuncture for low back pain: a clinical practice guideline from the Hong Kong taskforce of standardized acupuncture practice. J Tradit Chin Med. 2022 Feb;42(1):140-147. PMID: 35294134. <br>
+	  
+	  18)	Tang Y, Roberts RC, Lam CH, Wong WS, Yang M, Lao L, Lee WN*. Design of a Barometer-Based Pulse-Taking Device With In Vivo Validation Against High-Frequency Ultrasound Pulse Wave Imaging. IEEE Sens. J. 2022 Feb 22;22(7):7219-30. doi: 10.1109/JSEN.2022.3153684. <br>
+	  
+	  19)	Wang H, Hou YN, Yang M, Feng Y, Zhang YL, Smith CM, Hou W, Mao JJ*, Deng G. Herbal Formula Shenling Baizhu San for Chronic Diarrhea in Adults: A Systematic Review and Meta-analysis. Integr Cancer Ther. 2022 Jan-Dec;21:15347354221081214. doi: 10.1177/15347354221081214. PMID: 35635135.<br>
+	  
+	  20)	Yang M, Liou KT, Garland SN, Bao T, Hung TKW, Li SQ, Li YL, Mao JJ*. Acupuncture versus cognitive behavioral therapy for pain among cancer survivors with insomnia: an exploratory analysis of a randomized clinical trial. NPJ Breast Cancer. 2021 Nov 30;7(1):148. doi: 10.1038/s41523-021-00355-0. PMID: 34848737; PMCID: PMC8633385.<br>
+	  
+	  21)	Yang M, Sun M, Du T, Long H, Chen J, Liang F, Lao L*. The efficacy of acupuncture for stable angina pectoris: a systematic review and meta-analysis. Eur J Prev Cardiol. 2021 Nov;28(13):1415-25. doi:10.1177/2047487319876761. PMID: 31529993.<br>
+	  
+	  22)	Genovese TJ, Gehrman P, Yang M, Li Y, Garland SN, Orlow I, Mao JJ*. Genetic Predictors of Response to Acupuncture or Cognitive Behavioral Therapy for Insomnia in Cancer Survivors: An Exploratory Analysis. J Pain Symptom Manage. 2021 Sep;62(3):e192-e199. doi: 10.1016/j.jpainsymman.2021.03.002. Epub 2021 Mar 12. PMID: 33716034.<br>
+	  
+	  23)	Yang M, Li SQ, Smith CM, Zhang YL, Bao T, Mao JJ*. Tibetan herbal pain-relieving plaster for low back pain: A systematic review and meta-analysis. Biomed Pharmacother. 2021 Aug;140:111727. doi: 10.1016/j.biopha.2021.111727. Epub 2021 May 18. PMID: 34015584.<br>
+	  
+	  24)	Yang M †, Feng Y, Zhang YL, Smith CM, Hou Y-N, Wang H, Deng G, Mao JJ *: Herbal Formula MaZiRenWan (Hemp Seed Pill) for Constipation: A Systematic Review with Meta-analysis. Phytomedicine. 2021 Feb;82:153459. doi: 10.1016/j.phymed.2021.153459. Epub 2021 Jan 5. PMID: 33486266.<br>
+	  
+	  25)	Zhang J, Yang M, So TH, Chang TY, Qin Z, Chen H, Lam WL, Yeung WF, Chung KF, Jiang F, Lao L*. Electroacupuncture Plus Auricular Acupressure on Chemotherapy-Related Insomnia in Patients with Breast Cancer (EACRI): Study Protocol for a Randomized, Sham-Controlled Trial. Integr Cancer Ther. 2021 Jan-Dec;20:15347354211058695. doi: 10.1177/15347354211058695. PMID: 34802291; PMCID: PMC8606933.<br>
+	  
+	  26)	Wang JM, Yang M †, Wu QF*., Chen J, Deng SF, Chen L, Wei DN, Liang F*: Improvement of intestinal flora: accompany with the antihypertensive effect of electroacupuncture on stage 1 hypertension. Chin Med. 2021 Jan 7;16(1):7. doi: 10.1186/s13020-020-00417-8. PMID: 33413552; PMCID: PMC7792359.<br>
+	  
+	  27)	Cheung DS, Yeung WF, Chau PH, Lam TC, Yang M, Lai K, Ip CY, Lao L, Lin CC*. Patient‐centred, self‐administered acupressure for Chinese advanced cancer patients experiencing fatigue and co‐occurring symptoms: A pilot randomised controlled trial. Eur J Cancer Care (Engl). 2020 Sep 7:e13314. doi: 10.1111/ecc.13314. Epub ahead of print. PMID: 32896014.<br>
+	  
+	  28)	Chen ZH, Liang FR, Yang M, Li DH, Zhang Y, Ren Y*. Effect and safety of CX-DZ-II intelligent electroacupuncture therapeutic instrument for neck pain caused by cervical spondylosis: study protocol for a randomized controlled trial. Chin J Integr Med. 2020 May;26(5):375-381. doi: 10.1007/s11655-019-3038-2. Epub 2019 Aug 1. PMID: 31372917.<br>
+	  
+	  29)	Yang M, Du T, Long H, Sun M, Liang F, Lao L*. Acupuncture for menstrual migraine: a systematic review. BMJ Support Palliat Care. 2020 Mar 2:bmjspcare-2019-002024. doi: 10.1136/bmjspcare-2019-002024. Epub ahead of print. PMID: 32122964.<br>
+	  
+	  30)	Yang M, Lao L*. Emerging Applications of Metabolomics in Traditional Chinese Medicine Treating Hypertension: Biomarkers, Pathways and More. Front Pharmacol. 2019 Mar 8;10:158. doi: 10.3389/fphar.2019.00158. PMID: 30906260; PMCID: PMC6418033. <br><br>
+	  
+	  And more on: <br>
+	  NTU Academic Profile https://dr.ntu.edu.sg/cris/rp/rp02629<br>
+	  ORCID https://orcid.org/0000-0002-6514-3366 <br>
+	  PubMed MyNCBI https://www.ncbi.nlm.nih.gov/myncbi/mingxiao.yang.1/bibliography/public/<br>
+	  Google Scholar https://scholar.google.com/citations?user=aUw2u1AAAAAJ&hl=en&oi=ao<br><br>
+	  
+	  
+      </p>
+    </section>
+
+    <section id="contact" class="tab-content contact-bg">
+      <h2>Contact</h2>
+      <p>
+        Mingxiao Yang, MD (CMD), PhD<br>
+        Assistant Professor<br>
+        School of Biological Sciences<br>
+        NTU Chinese Medicine Clinic<br>
+        Nanyang Technological University, Singapore<br><br>
+        Email: <a href="mailto:mingxiao.yang@ntu.edu.sg" style="color: #bbf5e9;">mingxiao.yang@ntu.edu.sg</a><br>
+        Address: 60 Nanyang Drive, Singapore 637551
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Integrative Health (iHEALTH) Lab. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(item => item.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(content => {
+          content.classList.remove('active');
+          if (content.id === tab.getAttribute('data-tab')) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
