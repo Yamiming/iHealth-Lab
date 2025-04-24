@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integrative Health (iHEALTH) Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #1a1a1a;
+    }
+
+    header {
+      background: linear-gradient(rgba(0, 50, 100, 0.4), rgba(0, 50, 100, 0.4)), url("assets/bamboo.jpg") no-repeat center center/cover;
+      color: #ffffff;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1565c0;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-weight: bold;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background-color: #1976d2;
+      border-bottom: 3px solid #bbdefb;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .tab-content {
+      display: none;
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      color: #0d47a1;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .tab-content p strong {
+      font-weight: bold;
+    }
+
+    .tab-content ul {
+      padding-left: 20px;
+    }
+
+    .lab-focus-bg,
+    .projects-bg,
+    .publications-bg,
+    .contact-bg {
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: inset 0 0 0 1000px rgba(0, 70, 140, 0.5);
+    }
+
+    .lab-focus-bg { background-image: url("assets/amazon.jpg"); }
+    .projects-bg { background-image: url("assets/marina-bay.jpg"); }
+    .publications-bg { background-image: url("assets/egypt.jpg"); }
+    .contact-bg { background-image: url("assets/thailand-lake.jpg"); }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #bbdefb;
+      color: #0d47a1;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #1565c0;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .decorative-bar {
+      width: 100px;
+      height: 4px;
+      background: #42a5f5;
+      margin: 16px 0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the iHEALTH Lab</h1>
+  </header>
+
+  <nav>
+    <button class="tab-link active" data-tab="about">About Us</button>
+    <button class="tab-link" data-tab="lab-focus">Lab Focus</button>
+    <button class="tab-link" data-tab="projects">Projects</button>
+    <button class="tab-link" data-tab="publications">Publications</button>
+    <button class="tab-link" data-tab="contact">Contact</button>
+  </nav>
+
+  <main>
+    <section id="about" class="tab-content active">
+      <h2><strong>About Us</strong></h2>
+      <div class="decorative-bar"></div>
+      <p><strong>Welcome to iHEALTH Lab!</strong> We are a young and dynamic research group dedicated to integrative healthcare through cutting-edge research, global collaboration, and education. Our team embraces complementary therapies including acupuncture, herbal medicine, and exercise to promote health and manage complex diseases. We are led by <strong>Dr. Mingxiao Yang, MD (CMD), PhD</strong>, a physician-scientist trained at Harvard Medical School and Memorial Sloan Kettering Cancer Center, now Assistant Professor at NTU Singapore.</p>
+      <p><strong>Join Us:</strong> We welcome undergraduate/graduate students, postdocs, and collaborators. Email <a href="mailto:mingxiao.yang@ntu.edu.sg">mingxiao.yang@ntu.edu.sg</a> to connect.</p>
+    </section>
+
+    <section id="lab-focus" class="tab-content lab-focus-bg">
+      <h2><strong>Lab Focus</strong></h2>
+      <div class="decorative-bar"></div>
+      <p>Our research focuses on:</p>
+      <ul>
+        <li><strong>Integrative Therapies:</strong> Using acupuncture, herbal medicine, Tai Chi, and exercise for cancer-related side effects, metabolic syndrome, and cardiovascular disease.</li>
+        <li><strong>Mechanistic Research:</strong> Neurobiological, behavioral, and omics approaches to study cognition, sensory function, and memory.</li>
+        <li><strong>Healthcare Innovation:</strong> Enhancing access to therapies via digital tools, AI systems, and implementation science.</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="tab-content projects-bg">
+      <h2><strong>Projects</strong></h2>
+      <div class="decorative-bar"></div>
+      <p><strong>Ongoing Projects:</strong></p>
+      <ul>
+        <li>Tai Chi for Chemotherapy-Induced Peripheral Neuropathy: A randomized waitlist-controlled trial funded by the Harvard Osher Center.</li>
+        <li>Massage Therapy for Cancer Symptom Care: A systematic review and evidence map.</li>
+        <li>NIH R21 on Dopamine Metabolism in Insomnia Interventions (Acupuncture vs CBT).</li>
+      </ul>
+      <p><strong>Past Projects:</strong> Funded by MSKCC, NSFC, HMRF, and others focusing on sleep, blood pressure, pain, and gut microbiome.</p>
+    </section>
+
+    <section id="publications" class="tab-content publications-bg">
+      <h2><strong>Publications</strong></h2>
+      <div class="decorative-bar"></div>
+      <p>Access our full list of peer-reviewed work at:</p>
+      <ul>
+        <li><a href="https://www.ncbi.nlm.nih.gov/myncbi/mingxiao.yang.1/bibliography/public/" target="_blank">NCBI MyBibliography</a></li>
+        <li><a href="https://orcid.org/0000-0002-6514-3366" target="_blank">ORCID</a></li>
+        <li><a href="https://scholar.google.com/citations?user=aUw2u1AAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="tab-content contact-bg">
+      <h2><strong>Contact</strong></h2>
+      <div class="decorative-bar"></div>
+      <p><strong>Mingxiao Yang, MD (CMD), PhD</strong><br>
+        Assistant Professor, School of Biological Sciences<br>
+        NTU Chinese Medicine Clinic<br>
+        Nanyang Technological University, Singapore<br><br>
+        <strong>Email:</strong> <a href="mailto:mingxiao.yang@ntu.edu.sg">mingxiao.yang@ntu.edu.sg</a><br>
+        <strong>Address:</strong> 60 Nanyang Drive, Singapore 637551</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Integrative Health (iHEALTH) Lab. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(content => content.classList.remove('active'));
+        const target = document.getElementById(tab.dataset.tab);
+        if (target) target.classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
