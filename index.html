@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integrative Health (iHEALTH) Lab</title>
+
+  <!-- Use Lora for a classic and elegant feel -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #123C69;    /* Deep Navy */
+      --secondary: #EDC7B7;  /* Warm Coral */
+      --accent: #AC3B61;     /* Deep Pink */
+      --background: #EEE2DC; /* Soft Beige */
+      --text: #BAB2B5;       /* Gray */
+      --light-text: #FFFFFF; /* White */
+    }
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Lora', serif;
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--secondary);
+      color: var(--primary);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      max-height: 80px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav button {
+      flex: 1;
+      background: none;
+      border: none;
+      padding: 16px;
+      color: var(--light-text);
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background: var(--accent);
+      color: var(--light-text);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .tab-content {
+      display: none;
+      background: var(--light-text);
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .decorative-bar {
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+
+    p, li {
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    strong {
+      color: var(--primary);
+    }
+
+    .section-img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin: 20px 0;
+      border: 2px solid var(--accent);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      nav button { padding: 12px; font-size: 0.9rem; }
+      main { padding: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="assets/logo.png" alt="iHealth Lab Logo">
+    <h1>Welcome to the iHEALTH Lab</h1>
+  </header>
+
+  <nav>
+    <button class="tab-link active" data-tab="about">About Us</button>
+    <button class="tab-link" data-tab="lab-focus">Lab Focus</button>
+    <button class="tab-link" data-tab="news">News</button>
+    <button class="tab-link" data-tab="projects">Projects</button>
+    <button class="tab-link" data-tab="publications">Publications</button>
+    <button class="tab-link" data-tab="contact">Contact</button>
+  </nav>
+
+  <main>
+    <section id="about" class="tab-content active">
+      <h2>About Us</h2>
+      <div class="decorative-bar"></div>
+      <p>Welcome to iHEALTH Lab! We are a young, dynamic research team exploring integrative healthcare across acupuncture, herbal medicine, Tai Chi, and more. Led by <strong>Dr. Mingxiao Yang, MD (CMD), PhD</strong>, our mission is to bring evidence-based integrative therapies to all.</p>
+      <p><strong>Join us:</strong> Undergraduate/graduate students, postdocs, and collaborators—reach out at <a href="mailto:mingxiao.yang@ntu.edu.sg">mingxiao.yang@ntu.edu.sg</a>.</p>
+      <img class="section-img" src="assets/bamboo.jpg" alt="Bamboo Forest">
+    </section>
+
+    <!-- Additional sections unchanged... -->
+
+  </main>
+
+  <footer>
+    &copy; 2025 iHEALTH Lab. All rights reserved.
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        const target = document.getElementById(tab.dataset.tab);
+        if (target) target.classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
