@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrative Health (iHEALTH) Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #74C69D;
+      --secondary: #157F97;
+      --accent: #C04065;
+      --background: #FBF9F6;
+      --text: #333333;
+      --light-text: #FFFFFF;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lora', serif;
+      background: var(--background);
+      color: var(--text);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: var(--secondary);
+      padding: 0 32px;
+      height: 160px;
+    }
+
+    .logo {
+      height: auto;
+      max-height: 160px;
+      width: auto;
+      margin: 0 12px 0 32px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--light-text);
+      margin-left: 1.5rem;
+      flex: 1;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--secondary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav button {
+      flex: 1;
+      background: none;
+      border: none;
+      padding: 10px;
+      color: var(--light-text);
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background: var(--accent);
+      color: var(--light-text);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 10px auto;
+      padding: 0 8px;
+    }
+
+    .tab-content {
+      display: none;
+      background: var(--light-text);
+      color: var(--text);
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--text);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .decorative-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 12px;
+      border-radius: 2px;
+    }
+
+    p, li, strong {
+      line-height: 1.4;
+      color: var(--text);
+    }
+
+    ul {
+      padding-left: 2em;
+      margin-bottom: 1em;
+    }
+
+    li {
+      margin-bottom: 0.4em;
+      text-indent: -0.4em;
+      padding-left: 0.4em;
+    }
+
+    .section-img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin: 10px 0;
+      border: 2px solid var(--accent);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        height: 120px;
+      }
+      .logo {
+        max-height: 120px;
+        margin-left: 24px;
+      }
+      header h1 {
+        font-size: 3rem;
+        margin-left: 3em;
+      }
+      nav button {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+      main {
+        padding: 0 8px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 8px 0;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="assets/logo-colored.png" alt="iHealth Lab Logo">
+    <h1>iHEALTH Lab</h1>
+  </header>
+
+  <nav>
+    <button class="tab-link active" data-tab="about">About Us</button>
+    <button class="tab-link" data-tab="lab-focus">Lab Focus</button>
+    <button class="tab-link" data-tab="news">News</button>
+    <button class="tab-link" data-tab="projects">Projects</button>
+    <button class="tab-link" data-tab="publications">Publications</button>
+    <button class="tab-link" data-tab="contact">Contact</button>
+  </nav>
+
+  <main>
+    <section id="about" class="tab-content active">
+      <h2>About Us</h2>
+      <div class="decorative-bar"></div>
+      <p>Welcome to iHEALTH Lab! We are a young, dynamic research team exploring integrative healthcare across acupuncture, herbal medicine, Tai Chi, and more. Led by <strong>Dr. Mingxiao Yang, MD (CMD), PhD</strong>, our mission is to bring evidence-based integrative therapies to all.</p>
+      <p><strong>Join us:</strong> Undergraduate/graduate students, postdocs, and collaborators—reach out at <a href="mailto:mingxiao.yang@ntu.edu.sg">mingxiao.yang@ntu.edu.sg</a>.</p>
+      <img class="section-img" src="assets/bamboo.jpg" alt="Bamboo Forest">
+    </section>
+
+    <section id="lab-focus" class="tab-content">
+      <h2>Lab Focus</h2>
+      <div class="decorative-bar"></div>
+      <ul>
+        <li><strong>Integrative Therapies:</strong> Acupuncture, herbal medicine, Tai Chi & exercise for cancer side-effects, metabolic syndrome & cardiovascular diseases.</li>
+        <li><strong>Mechanistic Research:</strong> Neurobiology, omics, neuroimaging & quantitative sensory testing to study cognition & memory.</li>
+        <li><strong>Healthcare Innovation:</strong> AI, digital platforms & implementation science to improve therapy access.</li>
+      </ul>
+      <img class="section-img" src="assets/amazon.jpg" alt="Amazon Forest">
+    </section>
+
+    <section id="news" class="tab-content">
+      <h2>News</h2>
+      <div class="decorative-bar"></div>
+      <p><strong>April 2025:</strong> Osher Pilot Grant awarded for Tai Chi trial in CIPN.<br>
+      <strong>March 2025:</strong> Massage therapy systematic review accepted in <em>Integr Cancer Ther</em>.<br>
+      <strong>February 2025:</strong> PhD recruitment open—email us to apply!</p>
+      <img class="section-img" src="assets/marina-bay.jpg" alt="Singapore Marina Bay">
+    </section>
+
+    <section id="projects" class="tab-content">
+      <h2>Projects</h2>
+      <div class="decorative-bar"></div>
+      <p><strong>Ongoing Projects:</strong></p>
+      <ul>
+        <li>Tai Chi for Chemotherapy-Induced Peripheral Neuropathy: waitlist-controlled trial (Osher Pilot).</li>
+        <li>Massage Therapy for Cancer Symptom Care: systematic review & evidence map.</li>
+        <li>NIH R21: acupuncture vs CBT on dopamine metabolism in insomnia.</li>
+      </ul>
+      <img class="section-img" src="assets/egypt.jpg" alt="Egypt Landscape">
+    </section>
+
+    <section id="publications" class="tab-content">
+      <h2>Publications</h2>
+      <div class="decorative-bar"></div>
+      <p>See our full peer-reviewed list:</p>
+      <ul>
+        <li><a href="https://www.ncbi.nlm.nih.gov/myncbi/mingxiao.yang.1/bibliography/public/" target="_blank" rel="noopener">NCBI MyBibliography</a></li>
+        <li><a href="https://orcid.org/0000-0002-6514-3366" target="_blank" rel="noopener">ORCID</a></li>
+        <li><a href="https://dr.ntu.edu.sg/cris/rp/rp02629?" target="_blank" rel="noopener">NTU Academic Profile</a></li>
+        <li><a href="https://scholar.google.com/citations?user=aUw2u1AAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+      </ul>
+      <img class="section-img" src="assets/thailand-lake.jpg" alt="Calm Lake, Thailand">
+    </section>
+
+    <section id="contact" class="tab-content">
+      <h2>Contact</h2>
+      <div class="decorative-bar"></div>
+      <p><strong>Dr. Mingxiao Yang, MD (CMD), PhD</strong><br>
+         Assistant Professor, School of Biological Sciences & NTU Chinese Medicine Clinic<br>
+         Nanyang Technological University, Singapore</p>
+      <p><strong>Email:</strong> <a href="mailto:mingxiao.yang@ntu.edu.sg">mingxiao.yang@ntu.edu.sg</a><br>
+         <strong>Address:</strong> 60 Nanyang Drive, Singapore 637551</p>
+      <img class="section-img" src="assets/nyc.jpg" alt="New York City Skyline">
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 iHEALTH Lab. All rights reserved.
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        const target = document.getElementById(tab.dataset.tab);
+        if (target) target.classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
