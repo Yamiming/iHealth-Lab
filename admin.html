@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iHEALTH Admin Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container, .dashboard {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      color: #157F97;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #74C69D;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    .news-list {
+      margin-top: 20px;
+    }
+    .news-item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 4px;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container" id="login">
+    <h2>Admin Login</h2>
+    <input type="password" id="password" placeholder="Enter admin password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="dashboard" id="dashboard" style="display:none">
+    <h2>Post News</h2>
+    <input type="text" id="newsTitle" placeholder="Title" />
+    <input type="date" id="newsDate" />
+    <textarea id="newsContent" placeholder="News content..."></textarea>
+    <button onclick="addNews()">Publish</button>
+
+    <div class="news-list" id="newsList"></div>
+  </div>
+
+  <script>
+    const PASSWORD = "iheal123"; // You can change this password
+
+    function login() {
+      const input = document.getElementById('password').value;
+      if (input === PASSWORD) {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        loadNews();
+      } else {
+        alert("Incorrect password.");
+      }
+    }
+
+    function addNews() {
+      const title = document.getElementById('newsTitle').value;
+      const date = document.getElementById('newsDate').value;
+      const content = document.getElementById('newsContent').value;
+
+      if (!title || !date || !content) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      const news = { title, date, content };
+      let newsArray = JSON.parse(localStorage.getItem('ihealth_news')) || [];
+      newsArray.unshift(news);
+      localStorage.setItem('ihealth_news', JSON.stringify(newsArray));
+      loadNews();
+
+      document.getElementById('newsTitle').value = "";
+      document.getElementById('newsDate').value = "";
+      document.getElementById('newsContent').value = "";
+    }
+
+    function loadNews() {
+      const newsList = document.getElementById('newsList');
+      const newsArray = JSON.parse(localStorage.getItem('ihealth_news')) || [];
+      newsList.innerHTML = '';
+      newsArray.forEach((news, index) => {
+        newsList.innerHTML += `
+          <div class="news-item">
+            <strong>${news.date} - ${news.title}</strong>
+            <p>${news.content}</p>
+          </div>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>
